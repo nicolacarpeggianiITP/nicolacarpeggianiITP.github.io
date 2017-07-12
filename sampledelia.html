@@ -1,0 +1,128 @@
+<!-- Free Portfolio Theme by Matt Borchert - http://www.mattborchert.com -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/pure-min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/grids-responsive-min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<title>Sampledelia</title>
+
+
+</head>
+<body>
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+<!--<![endif]-->
+
+<!-- Header -->
+
+    <div class="navigation pure-g" id="menu">
+        <div class="brand pure-u-1 pure-u-md-1-2">
+            <div class="pure-menu">
+                <a href="index.html" class="pure-menu-heading brand-name">Nicola Carpeggiani</a>
+                <a href="#" class="custom-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+            </div>
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2">
+            <div class="pure-menu pure-menu-horizontal custom-can-transform">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Portfolio</a></li>
+                    <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">About</a></li>
+                    <li class="pure-menu-item"><a href="https://creativemarket.com/mattborchert?u=mattborchert" target="_blank" class="pure-menu-link">Store</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    (function (window, document) {
+    var menu = document.getElementById('menu'),
+        WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
+
+    function toggleHorizontal() {
+        [].forEach.call(
+            document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+            function(el){
+                el.classList.toggle('pure-menu-horizontal');
+            }
+        );
+    };
+
+    function toggleMenu() {
+        // set timeout so that the panel has a chance to roll up
+        // before the menu switches states
+        if (menu.classList.contains('open')) {
+            setTimeout(toggleHorizontal, 500);
+        }
+        else {
+            toggleHorizontal();
+        }
+        menu.classList.toggle('open');
+        document.getElementById('toggle').classList.toggle('x');
+    };
+
+    function closeMenu() {
+        if (menu.classList.contains('open')) {
+            toggleMenu();
+        }
+    }
+
+    document.getElementById('toggle').addEventListener('click', function (e) {
+        toggleMenu();
+    });
+
+    window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+    })(this, this.document);
+
+    </script>
+
+ <!-- Product Section -->
+       <div class="portfolio pure-g">
+           <div class="pure-u-1">
+               <div class="product">
+                   <img class="pure-img" src="images/portfolio/sampledelia.jpg" />
+                   <h3>Sampledelia</h3>
+                   <p> A multimedia performance piece that uses images and sounds from everyday life moments, to recreate an immersive environment. This environment will be based on sounds and images, happened in a precise time and location, that are sampled from their original sources and mixed together in a musical “non-time” recreated in an immersive room. This system was created using MAX MSP JITTER, a multichannel audio system and multiple projectors mapped using VDMX.
+
+
+
+                   </p>
+
+                   <img class="pure-img" src="images/portfolio/sampledelia2.jpg" />
+
+                  <center> 
+                   <p><a href="https://vimeo.com/216771131">ITP Thesis Week 2017 - Nicola Carpeggiani - Sampledelia</a> from <a href="https://vimeo.com/itpred">ITP</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                   <iframe src="https://player.vimeo.com/video/216771131" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+               </center>
+
+                </div>
+           </div>
+       </div> <!-- end portfolio pure-g -->
+
+    <!-- Footer Elements -->
+
+<div class="footer pure-g">
+    <div class="pure-u-1-2">
+        <ul class="social-icons">
+            <li><a href="http://www.twitter.com/mattborchert" target="_blank"><i class="fa fa-twitter fa-lg fa-fw"></i></a></li>
+>
+        </ul>
+    </div>
+    <div class="pure-u-1-2">
+        <p class="footer-credit">
+            Website by <a href="http://www.nicolacarpeggiani.com" target="_blank">Nicola Carpeggiani</a>
+        </p>
+    </div>
+</div>
+
+
+
+</body>
+</html>
